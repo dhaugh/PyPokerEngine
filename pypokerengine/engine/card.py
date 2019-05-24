@@ -12,6 +12,13 @@ class Card:
       16 : 'S'
   }
 
+  SUIT_SHAPE = {
+      2  : u'♣',
+      4  : u'♦',
+      8  : u'♥',
+      16 : u'♠'
+  }
+
   RANK_MAP = {
       2  :  '2',
       3  :  '3',
@@ -38,6 +45,7 @@ class Card:
 
   def __str__(self):
     suit = self.SUIT_MAP[self.suit]
+    suit = self.SUIT_SHAPE[self.suit]
     rank = self.RANK_MAP[self.rank]
     return "{0}{1}".format(suit, rank)
 
